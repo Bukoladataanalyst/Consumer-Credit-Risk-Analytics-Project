@@ -71,6 +71,20 @@ Underwriting decisions are directionally effective based on observable risk sepa
 
 Segment-level monitoring provides stronger risk visibility than aggregate portfolio metrics
 
+## Data Availability
+
+Due to GitHub file size limitations, raw LendingClub datasets
+(`accepted_2007_to_2018Q4.csv.gz`, `rejected_2007_to_2018Q4.csv.gz`)
+are not included in this repository.
+
+The analysis uses processed and derived datasets generated from the raw files:
+- `accepted_scored.csv`
+- `accepted_vs_rejected.csv`
+- `cluster_summary.csv`
+
+Raw data can be obtained directly from the LendingClub public dataset on Kaggle.
+
+
 **Project Structure**
 consumer-credit-risk/
 │
