@@ -1,114 +1,88 @@
-Consumer Credit Risk & Borrower Segmentation Analysis
+Consumer Credit Risk — Portfolio Concentration & Risk Drivers
+Executive Credit Risk Analysis using Python, SQL & Power BI
+📌 Project Overview
 
-**Project Overview**
+Consumer loan portfolios include borrowers with varying levels of credit risk, making it essential for financial institutions to understand where potential losses are concentrated and what factors drive default behavior. This project provides an executive-level analysis of consumer credit risk by examining default concentration across borrower segments, loan structures, and key financial characteristics.
 
-This project delivers an end-to-end consumer credit risk analysis designed to reflect real-world credit risk and underwriting workflows. Using LendingClub loan data, the analysis applies machine learning–based borrower segmentation, risk analytics, and executive reporting to evaluate default behavior, pricing effectiveness, and underwriting outcomes.
+The analysis is designed to support portfolio monitoring, risk-based pricing assessment, and underwriting decision-making through clear, decision-oriented insights.
 
-**Business Questions**
+🎯 Business Objectives
 
-Which borrower segments exhibit the highest probability of default?
+Identify where default risk is concentrated within the portfolio
 
-How do utilization and income-to-debt ratios influence default risk?
+Assess how borrower leverage and loan pricing relate to default behavior
 
-Which loan products contribute the most to expected loss?
+Evaluate the impact of loan structure (e.g., term length) on default exposure
 
-How does portfolio risk concentration change under economic stress scenarios?
+Validate underwriting decisions using observed borrower stability indicators
 
-**Data Sources**
+❓ Business Questions
 
-LendingClub Accepted Loans Dataset (2007–2018)
+Where is default risk concentrated within the portfolio?
 
-LendingClub Rejected Applications Dataset
+How do leverage and pricing relate to observed default behavior?
 
-Public, industry-recognized datasets commonly used in credit risk research.
+Which borrower and loan characteristics drive elevated default risk?
 
-**Methodology**
-Data Preparation & Feature Engineering (Python)
+Do observed outcomes support current underwriting decisions?
 
-Cleaned and standardized borrower attributes
+🧠 Analytical Approach
 
-Engineered key risk features (employment length, leverage proxies, log income)
+This project combines advanced data analysis and machine learning with financial risk analysis and executive dashboard reporting:
 
-Created default flags based on realized credit loss events
+Data cleaning and feature engineering (Python)
 
-**Borrower Segmentation**
+Borrower risk segmentation using unsupervised machine learning
 
-Applied K-Means clustering to segment borrowers into interpretable risk profiles
+Portfolio-level risk and pricing analysis
 
-Determined optimal cluster count using inertia (elbow) analysis
+Underwriting outcome validation
 
-Validated segmentation structure using PCA visualization
+Executive reporting via a one-page Power BI dashboard
 
-**Risk & Pricing Analysis**
+📊 Key Insights
 
-Evaluated default rates and exposure concentration by borrower segment
+Default risk is not evenly distributed across the portfolio, with a small borrower segment accounting for a disproportionate share of total defaults.
 
-Assessed alignment between interest rate pricing and observed default risk
+Borrower leverage is a primary driver of default behavior, as default rates increase materially at higher debt-to-income levels.
 
-Used loan term as a proxy for product-level risk comparison
+Longer-term loan products (60-month terms) contribute disproportionately to default exposure, exhibiting higher default rates than shorter-term loans despite higher pricing.
 
-**Underwriting Validation**
+Observed underwriting outcomes are directionally effective, as rejected applicants display weaker employment stability relative to accepted borrowers.
 
-Compared accepted and rejected applicants using available risk indicators
+🧾 Data Sources
 
-Validated underwriting decisions through employment stability separation
+LendingClub accepted loan data (2007–2018)
 
-Acknowledged real-world data limitations for rejected applicants
+LendingClub rejected loan applications
 
-**Executive Reporting**
+Public, industry-recognized consumer credit datasets
 
-Built interactive Power BI dashboards for portfolio risk, segmentation, and underwriting validation
+⚠️ Limitations & Governance
 
-**Key Insights**
+Rejected applicants lack complete financial ratios due to early-stage screening
 
-Default risk is concentrated within specific borrower segments rather than evenly distributed
+Analysis reflects historical borrower behavior
 
-Higher leverage and weaker income stability are associated with increased default risk
+Results are observational and do not imply causality
 
-Longer-term loan products contribute disproportionately to expected loss
+📈 Deliverables
 
-Underwriting decisions are directionally effective based on observable risk separation
+One-page executive credit risk dashboard (Power BI)
 
-Segment-level monitoring provides stronger risk visibility than aggregate portfolio metrics
+Portfolio-level risk insights and underwriting validation
 
-## Data Availability
+GitHub-hosted analysis notebooks and SQL scripts
 
-Due to GitHub file size limitations, raw LendingClub datasets
-(`accepted_2007_to_2018Q4.csv.gz`, `rejected_2007_to_2018Q4.csv.gz`)
-are not included in this repository.
+🧠 Tools & Technologies
 
-The analysis uses processed and derived datasets generated from the raw files:
-- `accepted_scored.csv`
-- `accepted_vs_rejected.csv`
-- `cluster_summary.csv`
+Python (data preparation, segmentation, analysis)
 
-Raw data can be obtained directly from the LendingClub public dataset on Kaggle.
+SQL (risk aggregation and portfolio metrics)
 
+Power BI (executive dashboard and reporting)
 
-**Project Structure**
-consumer-credit-risk/
-│
-├── data/
-│   ├── accepted_scored.csv
-│   └── rejected_features.csv
-│
-├── notebooks/
-│   └── Consumer_credit_risk.ipynb
-│
-├── sql/
-│   └── credit_risk_queries.sql
-│
-├── powerbi/
-│   └── credit_risk_dashboard.pbix
-│
-└── README.md
+👤 Author
 
-**Tools & Technologies**
-
-Python (pandas, scikit-learn, matplotlib)
-
-SQL
-
-Power BI
-
-Jupyter Notebook
+Bukola Aina
+Credit Risk & Financial Data Analytics
